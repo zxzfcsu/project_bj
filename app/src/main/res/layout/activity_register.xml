@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="注册"
+        android:textSize="35dp"
+        android:layout_above="@+id/ll_1"
+        android:layout_marginBottom="30dp"
+        android:layout_centerHorizontal="true"/>
+
+    <!--放置注册所需的文字按钮等-->
+    <LinearLayout
+        android:id="@+id/ll_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:orientation="vertical">
+
+
+        <RelativeLayout
+            android:id="@+id/ll_user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp">
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="用户名："
+                android:textSize="16dp" />
+
+            <EditText
+                android:id="@+id/UserName_register"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/tv_name"
+                android:hint=" 请输入要注册的用户名"
+                android:singleLine="true" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_password"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="密   码："
+                android:textSize="16dp" />
+
+            <EditText
+                android:id="@+id/UserPassword_register"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/tv_password"
+                android:hint="      请输入对应的密码      "
+                android:singleLine="true" />
+        </RelativeLayout>
+
+
+        <Button
+            android:id="@+id/register"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:text="完成注册"
+            android:textSize="18dp"
+            android:background="#FF00"
+            android:onClick="register"/>
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/login_register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/ll_1"
+        android:layout_marginRight="20dp"
+        android:text="已有账号，去登录"
+        android:background="@null"
+        android:layout_marginTop="10dp"
+        android:onClick="jump_login"/>
+
+</RelativeLayout>
